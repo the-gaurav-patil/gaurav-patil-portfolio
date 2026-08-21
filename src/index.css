@@ -1,0 +1,754 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+:root {
+    font-family: "Inter", sans-serif;
+    color: #f8fafc;
+    background: #030712;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: radial-gradient(circle at 20% 10%, rgba(34, 211, 238, 0.08), transparent 25%), radial-gradient(circle at 80% 30%, rgba(139, 92, 246, 0.08), transparent 30%), #030712;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: rgba(34, 211, 238, 0.25);
+}
+
+.font-display {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.font-mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.glass {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   GAURAV PATIL - HERO
+========================================================= */
+
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 18px;
+    border: 1px solid rgba(0, 210, 255, 0.28);
+    border-radius: 999px;
+    background: rgba(0, 170, 220, 0.055);
+    color: #48dfff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.05), inset 0 0 20px rgba(0, 200, 255, 0.025);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #12d9f5;
+    box-shadow: 0 0 14px rgba(18, 217, 245, 0.9);
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+.hero-location {
+    margin-top: 36px;
+    color: rgba(130, 165, 200, 0.8);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+}
+
+.hero-location span {
+    margin: 0 10px;
+    color: rgba(120, 150, 185, 0.45);
+}
+
+.hero-title {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(70px, 8vw, 126px);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+    font-weight: 750;
+}
+
+.hero-name-white {
+    color: #f4f7fb;
+}
+
+.hero-name-gradient {
+    width: fit-content;
+    background: linear-gradient( 110deg, #3bdcff 0%, #36a9ff 42%, #8c70ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-heading {
+    max-width: 700px;
+    margin-top: 42px;
+    color: #f2f5f9;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(30px, 3vw, 43px);
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+    font-weight: 650;
+}
+
+.hero-description {
+    max-width: 760px;
+    margin-top: 25px;
+    color: rgba(171, 194, 220, 0.9);
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 0 24px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease, background 250ms ease;
+}
+
+.hero-primary-button {
+    background: #f4f7fb;
+    color: #07111d;
+    box-shadow: 0 10px 35px rgba(255, 255, 255, 0.08);
+}
+
+.hero-primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 45px rgba(80, 200, 255, 0.18);
+}
+
+.hero-secondary-button {
+    color: #dce8f5;
+    border: 1px solid rgba(100, 160, 200, 0.24);
+    background: rgba(15, 30, 45, 0.4);
+}
+
+.hero-secondary-button:hover {
+    transform: translateY(-3px);
+    border-color: rgba(50, 210, 255, 0.55);
+    background: rgba(30, 100, 130, 0.12);
+}
+
+.hero-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.hero-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(100, 150, 190, 0.2);
+    border-radius: 12px;
+    color: rgba(190, 215, 235, 0.8);
+    background: rgba(10, 22, 35, 0.45);
+    transition: all 220ms ease;
+}
+
+.hero-socials a:hover {
+    color: #45dcff;
+    border-color: rgba(45, 215, 255, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(30, 190, 240, 0.1);
+}
+
+
+/* =========================================================
+   HERO PHOTO VISUAL
+========================================================= */
+
+.hero-visual {
+    position: relative;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-glow {
+    position: relative;
+    z-index: 5;
+    width: min(430px, 70vw);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 9px;
+    background: linear-gradient( 135deg, rgba(35, 220, 255, 0.9), rgba(60, 150, 255, 0.75), rgba(140, 90, 255, 0.9));
+    box-shadow: 0 0 30px rgba(40, 205, 255, 0.18), 0 0 90px rgba(70, 120, 255, 0.1);
+    animation: profileFloat 5s ease-in-out infinite;
+}
+
+.profile-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 6px;
+    background: #06111d;
+}
+
+.profile-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #07111c;
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.01);
+    filter: saturate(0.96) contrast(1.04);
+    transition: transform 500ms ease;
+}
+
+.profile-glow:hover .profile-image {
+    transform: scale(1.055);
+}
+
+
+/* =========================================================
+   ORBIT RINGS
+========================================================= */
+
+.hero-orbit {
+    position: absolute;
+    border: 1px solid rgba(60, 205, 255, 0.14);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 500px;
+    height: 500px;
+    animation: orbitRotate 18s linear infinite;
+}
+
+.orbit-two {
+    width: 570px;
+    height: 570px;
+    border-color: rgba(120, 100, 255, 0.09);
+    animation: orbitRotateReverse 24s linear infinite;
+}
+
+
+/* =========================================================
+   TECHNOLOGY BADGES
+========================================================= */
+
+.tech-badge {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 15px;
+    border: 1px solid rgba(100, 170, 210, 0.22);
+    border-radius: 999px;
+    color: #dceaf6;
+    background: rgba(5, 17, 30, 0.78);
+    backdrop-filter: blur(14px);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(50, 180, 220, 0.025);
+    animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.tech-badge svg {
+    color: #25d9f4;
+}
+
+.tech-sql {
+    top: 24%;
+    left: 4%;
+    animation-delay: -1s;
+}
+
+.tech-python {
+    top: 17%;
+    right: 3%;
+    animation-delay: -2s;
+}
+
+.tech-powerbi {
+    bottom: 28%;
+    left: 1%;
+    animation-delay: -3s;
+}
+
+.tech-excel {
+    bottom: 20%;
+    right: 2%;
+    animation-delay: -0.5s;
+}
+
+.tech-python-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    color: #07111d;
+    background: #50dfff;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CONNECTION DOTS
+========================================================= */
+
+.connection-dot {
+    position: absolute;
+    z-index: 2;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #31dcff;
+    box-shadow: 0 0 14px rgba(50, 220, 255, 0.8);
+    animation: connectionPulse 2.5s ease-in-out infinite;
+}
+
+.connection-one {
+    top: 14%;
+    left: 31%;
+}
+
+.connection-two {
+    top: 35%;
+    right: 2%;
+    animation-delay: -0.7s;
+}
+
+.connection-three {
+    bottom: 13%;
+    left: 28%;
+    animation-delay: -1.4s;
+}
+
+.connection-four {
+    bottom: 35%;
+    right: 25%;
+    animation-delay: -2s;
+}
+
+
+/* =========================================================
+   MINI ANALYTICS CARD
+========================================================= */
+
+.mini-analytics-card {
+    position: absolute;
+    z-index: 8;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(330px, 75%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 18px;
+    border: 1px solid rgba(90, 160, 200, 0.18);
+    border-radius: 16px;
+    background: rgba(5, 15, 27, 0.82);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), inset 0 0 25px rgba(30, 180, 230, 0.025);
+}
+
+.mini-analytics-card>div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mini-label {
+    color: #38dfff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+}
+
+.mini-analytics-card strong {
+    color: #dfeaf4;
+    font-size: 12px;
+}
+
+.mini-bars {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+    height: 30px;
+}
+
+.mini-bars span {
+    width: 4px;
+    border-radius: 4px;
+    background: #31d9f4;
+    animation: barPulse 1.7s ease-in-out infinite;
+}
+
+.mini-bars span:nth-child(1) {
+    height: 35%;
+}
+
+.mini-bars span:nth-child(2) {
+    height: 65%;
+    animation-delay: -0.2s;
+}
+
+.mini-bars span:nth-child(3) {
+    height: 45%;
+    animation-delay: -0.4s;
+}
+
+.mini-bars span:nth-child(4) {
+    height: 85%;
+    animation-delay: -0.6s;
+}
+
+.mini-bars span:nth-child(5) {
+    height: 100%;
+    animation-delay: -0.8s;
+}
+
+
+/* =========================================================
+   BACKGROUND CANVAS
+========================================================= */
+
+.data-background {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO GLOW
+========================================================= */
+
+.hero-bottom-glow {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: -120px;
+    height: 250px;
+    background: radial-gradient( ellipse, rgba(0, 190, 255, 0.09), transparent 70%);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes statusPulse {
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes profileFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes orbitRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitRotateReverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes badgeFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes connectionPulse {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes barPulse {
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+    .hero-visual {
+        min-height: 520px;
+    }
+    .orbit-one {
+        width: 430px;
+        height: 430px;
+    }
+    .orbit-two {
+        width: 490px;
+        height: 490px;
+    }
+    .tech-sql {
+        left: 5%;
+    }
+    .tech-python {
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(65px, 18vw, 100px);
+    }
+    .hero-heading {
+        margin-top: 32px;
+        font-size: 30px;
+    }
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    .hero-visual {
+        min-height: 460px;
+        margin-top: 15px;
+    }
+    .profile-glow {
+        width: min(330px, 72vw);
+    }
+    .orbit-one {
+        width: 360px;
+        height: 360px;
+    }
+    .orbit-two {
+        width: 410px;
+        height: 410px;
+    }
+    .tech-badge {
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+    .tech-sql {
+        left: 1%;
+    }
+    .tech-python {
+        right: 0;
+    }
+    .tech-powerbi {
+        left: 0;
+    }
+    .tech-excel {
+        right: 0;
+    }
+    .mini-analytics-card {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-status {
+        font-size: 9px;
+        padding: 9px 12px;
+    }
+    .hero-location {
+        margin-top: 25px;
+        font-size: 10px;
+    }
+    .hero-title {
+        font-size: 68px;
+    }
+    .hero-heading {
+        font-size: 25px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-primary-button,
+    .hero-secondary-button {
+        width: 100%;
+    }
+    .hero-visual {
+        min-height: 400px;
+    }
+    .profile-glow {
+        width: 270px;
+    }
+    .orbit-one {
+        width: 295px;
+        height: 295px;
+    }
+    .orbit-two {
+        width: 335px;
+        height: 335px;
+    }
+    .tech-badge {
+        padding: 7px 9px;
+        font-size: 8px;
+    }
+    .tech-sql {
+        top: 18%;
+    }
+    .tech-python {
+        top: 14%;
+    }
+    .tech-powerbi {
+        bottom: 24%;
+    }
+    .tech-excel {
+        bottom: 17%;
+    }
+    .mini-analytics-card {
+        width: 270px;
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-glow,
+    .hero-orbit,
+    .tech-badge,
+    .status-dot,
+    .connection-dot,
+    .mini-bars span {
+        animation: none !important;
+    }
+}
+
+.glow-card {
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.glow-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(34, 211, 238, 0.28);
+    box-shadow: 0 0 35px rgba(34, 211, 238, 0.08), inset 0 0 30px rgba(139, 92, 246, 0.025);
+}
+
+.grid-bg {
+    background-image: linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.035) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.pulse-dot {
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
