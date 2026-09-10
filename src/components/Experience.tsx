@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-7xl px-6 py-28">
-      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">03 — EXPERIENCE</p><h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">Professional<br /><span className="text-slate-500">Experience</span></h2></div>
+      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">EXPERIENCE</p><h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">Professional<br /><span className="text-slate-500">Experience</span></h2></div>
       <div className="relative border-l border-white/10 pl-7">
         <div className="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,.8)]" />
         <div className="glass rounded-3xl p-7 sm:p-9">
