@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react";
 export default function Education() {
   return (
     <section id="education" className="mx-auto max-w-7xl px-6 py-28">
-      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">06 — EDUCATION</p><h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">Academic<br /><span className="text-slate-500">Background</span></h2></div>
+      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">EDUCATION</p><h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">Academic<br /><span className="text-slate-500">Background</span></h2></div>
       <div className="glass rounded-3xl p-7 sm:p-10">
         <div className="flex flex-col gap-6 sm:flex-row">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/10 bg-cyan-400/5"><GraduationCap className="text-cyan-400" size={25} /></div>
