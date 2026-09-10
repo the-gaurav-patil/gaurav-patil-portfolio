@@ -8,7 +8,7 @@ const stats = [
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-7xl px-6 py-28">
-      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">01 — ABOUT</p><h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">Turning Data Into<br /><span className="text-slate-500">Decisions</span></h2></div>
+      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">ABOUT</p><h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">Turning Data Into<br /><span className="text-slate-500">Decisions</span></h2></div>
       <div className="grid gap-12 lg:grid-cols-2">
         <div className="space-y-6 text-sm leading-8 text-slate-400">
           <p>I'm a Data Analyst passionate about transforming raw data into meaningful business insights. I work with SQL, Python, Excel, Power BI, and MySQL to clean, analyze, visualize, and communicate data effectively.</p>
