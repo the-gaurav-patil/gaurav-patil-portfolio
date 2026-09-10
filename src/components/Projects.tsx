@@ -322,7 +322,7 @@ export default function Projects() {
       {/* SECTION HEADER */}
       <div className="mb-14">
         <p className="font-mono text-xs text-cyan-400">
-          04 — PROJECTS
+         PROJECTS
         </p>
 
         <h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
