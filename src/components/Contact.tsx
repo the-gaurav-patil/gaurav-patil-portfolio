@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-7xl px-6 py-28">
-      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">07 — CONTACT</p><h2 className="mt-4 max-w-3xl font-display text-4xl font-bold sm:text-6xl">Let's Build Something<br /><span className="text-slate-500">With Data</span></h2><p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400">Open to Data Analyst opportunities where I can apply analytical thinking, technical skills, and business understanding to solve real-world problems.</p></div>
+      <div className="mb-14"><p className="font-mono text-xs text-cyan-400">CONTACT</p><h2 className="mt-4 max-w-3xl font-display text-4xl font-bold sm:text-6xl">Let's Build Something<br /><span className="text-slate-500">With Data</span></h2><p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400">Open to Data Analyst opportunities where I can apply analytical thinking, technical skills, and business understanding to solve real-world problems.</p></div>
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-3">
           <a href="mailto:gauravpatil907540@gmail.com" className="glow-card glass flex items-center gap-4 rounded-2xl p-5"><Mail size={19} className="text-cyan-400" /><div><p className="font-mono text-[9px] text-slate-600">EMAIL</p><p className="mt-1 text-sm">gauravpatil907540@gmail.com</p></div></a>
